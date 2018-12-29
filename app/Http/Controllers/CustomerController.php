@@ -37,7 +37,14 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->input();
+        $customer = new Customer();
+        $customer->first_name=$request->input('first_name');
+        $customer->last_name=$request->input('last_name');
+        $customer->email=$request->input('email');
+        $customer->contact_no=$request->input('contact_no');
+        $customer->status=($request->input('status')!==null);
+        $customer->save();
+        return redirect('customer');
     }
 
     /**
