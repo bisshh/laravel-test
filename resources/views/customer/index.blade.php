@@ -32,7 +32,12 @@
 				<td>{{$customer->created_at}}</td>
 				<td>{{$customer->status}}</td>
 				<td>
-					<a href="{{Url('customer/'.$customer->id.'/edit')}}" class="btn btn-warning btn-xs">Edit</a>
+					<form method="post" action="{{url('customer/'.$customer->id)}}">
+						<a href="{{Url('customer/'.$customer->id.'/edit')}}" class="btn btn-warning btn-sm">Edit</a>
+						{{method_field('DELETE')}}
+						{{csrf_field()}}
+						<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+					</form>
 				</td>
 			</tr>
 		@endforeach
