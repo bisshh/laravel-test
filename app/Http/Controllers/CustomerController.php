@@ -12,10 +12,19 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $customers=null;
+        if($request->has("search")){
+            $customers=Customer::where('first_name', 'like', '%'.$request->input('search').'%')
+            ->get();
+        }
+        else{
+            $customers=Customer::all();
+        }
+
         return view('customer.index',[
-            'customers'=>Customer::all()
+            'customers'=>$customers
         ]);
     }
 

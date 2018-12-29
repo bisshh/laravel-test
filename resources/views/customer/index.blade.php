@@ -6,10 +6,23 @@
 	<div class="page-header">
 		<h1>Customer List</h1>
 	</div>
-	<div class="text-right">
-		<p>	
-			<a href="{{url('customer/create')}}" class="btn btn-primary btn-sm">Create Customer</a>
-		</p>	
+	<div class="row">
+		<div class="col-4">
+			<form action="{{url('customer')}}">
+				{{csrf_field()}}
+				<div class="input-group mb-3">
+				  <input type="text" class="form-control" name="search" placeholder="Search here.." aria-describedby="button-addon2">
+				  <div class="input-group-append">
+				    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+				  </div>
+				</div>
+			</form>
+		</div>
+		<div class="col-8 text-right">
+			<p>	
+				<a href="{{url('customer/create')}}" class="btn btn-primary btn-sm">Create Customer</a>
+			</p>
+		</div>
 	</div>	
 	<table class="table">
 		<tr>
