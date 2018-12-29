@@ -65,9 +65,12 @@ class CustomerController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customer $customer)
+    public function edit($id)
     {
-        //
+        $customer = Customer::findorFail($id);    
+        return view('customer.edit',[
+            'customer'=>$customer
+        ]);
     }
 
     /**
