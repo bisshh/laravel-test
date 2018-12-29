@@ -43,6 +43,7 @@ class CustomerController extends Controller
         $customer->email=$request->input('email');
         $customer->contact_no=$request->input('contact_no');
         $customer->status=($request->input('status')!==null);
+        $customer->ipaddress=$request->ip();
         $customer->save();
         return redirect('customer');
     }
