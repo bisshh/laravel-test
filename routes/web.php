@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('/customer', 'CustomerController');
+Route::get('/customer', 'CustomerController@index');
