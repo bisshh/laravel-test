@@ -1,0 +1,34 @@
+/*!
+ *  Copyright © 2018, allright reserved
+ *  Design & Responsive : Resham Khadka
+ *	Project : Gorkhapatra
+ */
+
+// Bootstrap 4.0.0
+@import "bootstrap/bootstrap";
+
+// Font Awesome 4.7 (Vector Icon Font)
+//@import "font-awesome/fontawesome";
+
+// Html5 reset code
+@import "reset.scss";
+
+// Font Awesome 5.0 (Vector Icon Font)
+@import "fontawesome.scss";
+
+// Main SASS File
+@import "main.scss";
+
+.form-control {color:#333;}
+
+// Component
+@import "component.scss";
+
+// Theme
+@import "theme.scss";
+
+// Light Box
+@import "lightbox.scss";
+
+// Responsive
+@import "responsive.scss";

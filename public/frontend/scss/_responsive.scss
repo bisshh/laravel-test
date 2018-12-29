@@ -1,0 +1,21 @@
+.show-mb {display:none;}
+.hide-mb {display:block;}
+@include media-breakpoint-up(sm) {
+	#fixedLSide.fixed {position:fixed; top:60px; width:160px;/*width: 13.67%;*/}
+	#fixedRSide.fixed {position:fixed; bottom:20px; width:350px;/*width: 29.33%;*/ top:auto;}
+}
+//Max width 767.98px
+@include media-breakpoint-down(sm) {
+	.top {padding:5px 0 !important; line-height: normal;}
+	.top ul.pradesh li {margin:0;}
+	.show-mb {display:block;}
+	.hide-mb {display:none;}
+	nav {z-index:99;
+		.ic.menu {top:8px;
+			.line {height:4px; margin-bottom: 5px;}
+		}
+	}
+	.home-body .scroll-news .news-wrap .img-gallery .more-photo p {margin-top: 17%; line-height: 16px; font-size: 16px;}
+	#fixedRSide {position:relative !important;}
+	.mega-menu {position: relative; height:auto;}
+}
