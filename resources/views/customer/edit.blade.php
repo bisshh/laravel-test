@@ -7,7 +7,7 @@
 		<h1>Edit Customer</h1>
 	</div>
 
-	<form method="post" action="{{url('customer')}}">
+	<form method="post" action="{{url('customer/'.$customer->id)}}">
 		<div class="form-group">
 			<label>First Name</label>
 			<input type="text" name="first_name" class="form-control" required="required" value="{{$customer->first_name}}" /> 
@@ -34,6 +34,7 @@
 		</div>
 		{{method_field('PUT')}}
 		{{csrf_field()}}
+		<input type="hidden" name="id" value="{{$customer->id}}"/>
 		<div class="form-group">
 			<button type="submit" class="btn btn-success">Update</button>
 			<a href="{{url('customer')}}" class="btn btn-danger">Back</a>
