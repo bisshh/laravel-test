@@ -31,7 +31,7 @@
 		{{csrf_field()}}
 		<div class="form-group">
 			<button type="submit" class="btn btn-success">Create</button>
-			<a href="{{url('customer')}}" class="btn btn-danger">Reset</a>
+			<a href="{{url('customer')}}" class="btn btn-danger">Back</a>
 		</div>
 	</form>
 @endsection
